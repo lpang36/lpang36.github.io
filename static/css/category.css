@@ -1,0 +1,55 @@
+.hex:before {
+	border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-right: 80px solid #ffffff;
+    left: -80px;
+}
+
+.hex {
+	height: 200px;
+	padding: 10px;
+}
+
+.hex:after {
+    right: -80px;
+    border-top: 100px solid transparent;
+    border-left: 80px solid #ffffff;
+    border-bottom: 100px solid transparent;
+}
+
+.category {
+	font-size: 50px;
+	position: relative;
+	top: 15%;
+}
+
+.post {
+	opacity: 0.5;
+}
+
+.post:hover {
+	opacity: 1;
+}
+
+.text {
+}
+
+.title {
+	font-size: 20px;
+}
+
+.blurb {
+	font-size: 15px;
+}
+
+.featuredImage {
+	border-radius: 50%;
+	width: 180px;
+	height: 180px;
+	float: right;
+}
+
+.icon {
+	height: 20px;
+	width: 20px;
+}

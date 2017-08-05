@@ -14,9 +14,9 @@ var postSchema = mongoose.Schema({
 	link: String,
 	image_path: String,
 	category: String
-});
+}, { collection: 'posts' });
 
-var Post = mongoose.model("Post",postSchema);
+var Post = mongoose.model("post",postSchema);
 
 var express = require('express');
 var app = express();
@@ -37,7 +37,7 @@ app.get('/post/:id)', function(req, res){
 */
 
 app.get('/:category/', function(req,res){
-	Post.find({category: req.params.category}, function (postList) {
+	Post.find({category: req.params.category}, function (err, postList) {
 		if (postList&&postList.length > 0) {
 			res.render('category', {
 				category: req.params.category,

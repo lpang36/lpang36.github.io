@@ -6,8 +6,9 @@
 }
 
 .hex {
-	height: 200px;
+	height: 180px;
 	padding: 10px;
+	margin: auto;
 }
 
 .hex:after {
@@ -21,10 +22,12 @@
 	font-size: 50px;
 	position: relative;
 	top: 15%;
+	color: #ffffff;
 }
 
 .post {
 	opacity: 0.5;
+	width: 80%;
 }
 
 .post:hover {
@@ -32,6 +35,8 @@
 }
 
 .text {
+	position: absolute;
+	width: calc(100% - 180px);
 }
 
 .title {
@@ -44,9 +49,13 @@
 
 .featuredImage {
 	border-radius: 50%;
-	width: 180px;
+	width: auto;
 	height: 180px;
-	float: right;
+}
+
+.featuredImageContainer {
+	height: 180px;
+	margin-left: calc(100% - 180px);
 }
 
 .icon {

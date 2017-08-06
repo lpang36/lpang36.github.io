@@ -9,26 +9,28 @@
 <body>
 <div class="bg">
 <% include partials/header %>
-</div class="category">
+<div class="category">
 <%= category %>
 </div>
 <% posts.forEach(function(post) {%>
 	<div class="hex post">
 		<div class = "text">
 			<div class = "title"> 
-			<% post.title %>
+			<%= post.title %>
 			<% if (post.github != "") { %>
-			<a href=<% post.github %> class = "icon"><img src="/static/images/github.png"></a>
+			<a href=<%= post.github %> class = "icon"><img src="/static/images/github.png"></a>
 			<% } %>
 			<% if (post.link != "") { %>
-			<a href=<% post.link %> class = "icon"><img src="/static/images/link.png"></a>
+			<a href=<%= post.link %> class = "icon"><img src="/static/images/link.png"></a>
 			<% } %>
 			</div>
 			<div class = "blurb">
-			<% post.text %>
+			<%= post.text %>
 			</div>
 		</div>
-		<img src=<% post.imagePath %> class = "featuredImage">
+		<div class = "featuredImageContainer">
+			<img src=<%= post.image_path %> class = "featuredImage">
+		</div>
 	</div>
 <% }); %>
 </div>

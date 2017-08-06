@@ -22,13 +22,13 @@ var postSchema = mongoose.Schema({
 var Post = mongoose.model("Post",postSchema);
 
 var newPost = new Post({
-    title: 'Soccer Sentimeter',
-	text: 'Website which tracks and analyzes Twitter sentiment of Premier League teams and players. Written in the Django framework. Uses the Twitter, Google Maps, Highcharts, MediaWiki, and TextBlob APIs.',
-	date: '2017/08/05',
-	post_id: 1,
-	github: 'https://github.com/lpang36/SoccerSentimeter',
-	link: 'http://soccersentimeter.pythonanywhere.com/',
-	image_path: '/static/images/premierleague.png',
+    title: 'Roundworm Neural Simulation',
+	text: 'Evolve a colony of organisms (based on C. elegans) to adapt to various environmental stimuli, using an evolutionary algorithm and spike-timing dependent plasticity.',
+	date: '2017/08/06',
+	post_id: 2,
+	github: 'https://github.com/lpang36/RoundwormNeuralSimulation',
+	link: '',
+	image_path: '/static/images/neuron.jpg',
 	category: 'project'
 });
 		

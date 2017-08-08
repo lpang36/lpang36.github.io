@@ -1,6 +1,21 @@
 body, html {
     height: 100%;
 	margin: 0px;
+	font-family: 'Saira', sans serif;
+}
+
+span {
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+
+  z-index: 1;
+
+  /* fixes overlap error in IE7/8, 
+     make sure you have an empty gif */
+  background-image: url("/static/images/empty.gif"); 
 }
 
 .bg { 
@@ -46,7 +61,7 @@ body, html {
 .largeText {
 	clear: both;
 	position: relative;
-	top:50%;
+	top:40%;
     left:50%;
     transform: translate(-50%, -50%);
     transform: -webkit-translate(-50%, -50%);
@@ -61,17 +76,18 @@ body, html {
 .subText {
 	margin: auto;
 	position: relative;
-	top: 50%;
+	top: 35%;
 	display: flex;
 	justify-content: space-between;
-	width: 40%;
+	width: 50%;
+	min-width: 600px;
 }
 
 .hex:before {
     content: "";
     width: 0; height: 0;
-	border-top: 13px solid transparent;
-    border-bottom: 13px solid transparent;
+	border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
     border-right: 10px solid #ffffff;
     position: absolute;
 	float: left;
@@ -91,9 +107,9 @@ body, html {
     position: absolute;
     right: -10px;
 	float: right;
-    border-top: 13px solid transparent;
+    border-top: 16px solid transparent;
     border-left: 10px solid #ffffff;
-    border-bottom: 13px solid transparent;
+    border-bottom: 16px solid transparent;
 	top: 0px;
 }
 
@@ -132,23 +148,41 @@ body, html {
 .icon {
 }
 
-.icon > img {
+.icon > i {
     height: 20px;
-	width: 20px;
+	width: auto;
+	color: #000000;
 }
 
 .color1 { 
-	background-color: #E7DFDD;
+	background-color: #FFFFFF;
 }
 
 .color2 {
-	background-color: #813772;
+	background-color: #CC2C11;
 }
 
 .color3 {
-	background-color: #062F4F;
+	background-color: #941305;
 }
 
 .color4 {
 	background-color: #000000;
+}
+
+.placeholder, .notFound {
+	position: absolute;
+	top:10%;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	width: 400px;
+	height: 400px;
+}
+
+.notFound {
+	top:0;
+	font-size: 25px;
+	color: #ffffff;
 }

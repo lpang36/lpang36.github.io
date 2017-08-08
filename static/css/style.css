@@ -24,12 +24,13 @@ span {
     background-image: url("/static/images/roots.png");
 	
     /* Full height */
-    height: 100%; 
+	min-height: 100%;
 
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	background-attachment: fixed;
 }
 
 .menu {
@@ -148,7 +149,7 @@ span {
 .icon {
 }
 
-.icon > i {
+.icon > i, img {
     height: 20px;
 	width: auto;
 	color: #000000;

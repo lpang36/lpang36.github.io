@@ -21,18 +21,7 @@ var postSchema = mongoose.Schema({
 
 var Post = mongoose.model("Post",postSchema);
 
-var newPost = new Post({
-    title: 'Uterine MRI Segmentation',
-	text: 'Created software in Matlab to identify anatomical structures in MRI images of uterine fibroids with minimal user input, for an internship in Dr. Kullervo Hynynen\'s Focused Ultrasound Lab at Sunnybrook Research Institute. Greatly improved efficiency of segmentation process.',
-	date: '2017/08/08',
-	post_id: 11,
-	github: '',
-	link: '',
-	image_path: '/static/images/uterinefibroid.jpg',
-	category: 'Research'
-});
-		
-newPost.save(function(error){ 
+Post.findOneAndUpdate({title:'Phone Camera Radiation Meter'},{$set:{text:'Independent research project on the feasibility of using a smart phone camera to detect and measure ionizing radiation exposure. Published in the Canadian Young Scientist Journal (now Journal of Student Science and Technology). Won gold medal at Toronto Science Fair.'}},function(error){ 
 	if (error) {
 		console.log("Error");
 		return;
@@ -40,3 +29,4 @@ newPost.save(function(error){
 	console.log("Post saved");
 	mongoose.connection.close();
 });
+

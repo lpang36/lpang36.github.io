@@ -11,5 +11,8 @@
     "mongoose": "^4.11.5",
     "pug": "^2.0.0-rc.2"
   },
+  "engines": {
+	"node": "6.11.1"
+  },
   "devDependencies": {}
 }

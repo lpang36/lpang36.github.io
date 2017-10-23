@@ -27,7 +27,9 @@ var postSchema = mongoose.Schema({
 	github: String,
 	link: String,
 	image_path: String,
-	category: String
+	category: String,
+	tags: Array,
+	priority: Number
 }, { collection: 'posts' });
 
 var Post = mongoose.model("post",postSchema);

@@ -104,7 +104,7 @@ app.get('/deletePost/', function(req, res){
 });
 
 app.get('/:category/', function(req,res){
-	Post.find({$query: {category: req.params.category}, $orderby: {priority: 1}}, function (err, postList) {
+	Post.find({category: req.params.category}).sort('priority').exec(function (err, postList) {
 		if (postList&&postList.length > 0) {
 			var posts = [];
 			postList.forEach(function (post) {

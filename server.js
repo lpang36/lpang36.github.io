@@ -108,7 +108,6 @@ app.get('/:category/', function(req,res){
 			postList.forEach(function (post) {
 				posts.push(post.toJSON());
 			});
-			console.log(posts[0].tags)
 			res.render('category', {
 				category: req.params.category,
 				posts: posts

@@ -25,11 +25,17 @@
 			</div>
 			<div class = "blurb">
 			<%= post.text %>
+			<%= post.tags %>
 			</div>
 		</div>
 		<div class = "featuredImageContainer">
 			<img src=<%= post.image_path %> class = "featuredImage">
 		</div>
+		<% post.tags.forEach(function(tag) {%>
+			<div class="tag">
+			<%= tag %>
+			</div>
+		<% }); %>
 	</div>
 <% }); %>
 </body>

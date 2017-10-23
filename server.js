@@ -102,11 +102,16 @@ app.get('/deletePost/', function(req, res){
 });
 
 app.get('/:category/', function(req,res){
-	Post.find({category: req.params.category}, function (err, postList) {
+	Post.find({$query: {category: req.params.category}, $orderby: {priority: 1}}, function (err, postList) {
 		if (postList&&postList.length > 0) {
+			var posts = [];
+			postList.forEach(function (post) {
+				posts.push(post.toJSON());
+			});
+			console.log(posts[0].tags)
 			res.render('category', {
 				category: req.params.category,
-				posts: postList
+				posts: posts
 			});
 		}
 		else {
@@ -152,7 +157,9 @@ app.post('/createPost', function(req, res) {
 		github: req.body.github,
 		link: req.body.link,
 		image_path: req.body.image_path,
-		category: req.body.category
+		category: req.body.category,
+		priority: req.body.priority,
+		tags: req.body.tags
 	});
 	newPost.save(function(error){
 		res.end();
@@ -167,7 +174,9 @@ app.post('/modifyPost', function(req, res) {
 		github: req.body.github,
 		link: req.body.link,
 		image_path: req.body.image_path,
-		category: req.body.category
+		category: req.body.category,
+		priority: req.body.priority,
+		tags: req.body.tags
 	}},function(error){
 		res.end();
 	});

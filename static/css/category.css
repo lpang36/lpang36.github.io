@@ -122,6 +122,47 @@
   }
 }
 
+@media all and (max-width:800px) {   
+    .hex:before {
+    border-top: 150px solid transparent;
+      border-bottom: 150px solid transparent;
+      border-right: 80px solid #ffffff;
+      left: -80px;
+  }
+
+  .hex {
+    height: 280px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    top: 20%;
+  }
+
+  .hex:after {
+      right: -80px;
+      border-top: 150px solid transparent;
+      border-left: 80px solid #ffffff;
+      border-bottom: 150px solid transparent;
+  }
+
+  .featuredImage {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+  }
+
+  .featuredImageContainer {
+    height: 280px;
+    margin-left: calc(100% - 180px);
+  }
+
+  .text {
+    position: absolute;
+    width: calc(100% - 180px);
+  }
+}
+
 .category {
 	font-size: 50px;
 	position: relative;

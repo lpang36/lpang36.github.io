@@ -88,18 +88,16 @@ span {
 }
 
 .largeText {
-	clear: both;
-	position: relative;
-	top:40%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    transform: -webkit-translate(-50%, -50%);
-    transform: -moz-translate(-50%, -50%);
-    transform: -ms-translate(-50%, -50%);
-	font-size: 100px;
-	width: 60%;
-	color: #ffffff;
-	text-align: center;
+    position: relative;
+    top: 30%;
+    font-size: 100px;
+    max-width: 75%;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    line-height: 1.5;
 }
 
 .subText {
@@ -177,7 +175,7 @@ span {
 .icon {
 }
 
-.icon > i, img {
+.icon > i, icon > img {
     height: 20px;
 	width: auto;
 	color: #000000;
@@ -214,4 +212,28 @@ span {
 	top:0;
 	font-size: 25px;
 	color: #ffffff;
+}
+
+#profile {
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 20%;
+}
+
+@media(max-width:1147px) {
+    #profile {
+        height: 250px;
+        border-radius: 50%;
+        margin-left: 0;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media(max-width:750px) {
+    #profile {
+        height: 0;
+        width: 0;
+    }
 }
